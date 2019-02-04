@@ -1,0 +1,92 @@
+.button{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.button:hover{
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+/*.menu-bar{*/
+    /*-fx-background-color: black;*/
+    /*-fx-text-fill: red;*/
+/*}*/
+/*.menu-item{*/
+    /*-fx-background-color: black;*/
+    /*-fx-text-fill: red;*/
+/*}*/
+/*.menu-button{*/
+    /*-fx-background-color: black;*/
+    /*-fx-text-fill: red;*/
+    /*-fx-border: none;*/
+/*}*/
+
+.menu-bar { /* The menu bar itself */
+    -fx-background-color: black;
+    -fx-text-fill: red;
+}
+.menu { /* The File menu item */
+    -fx-background-color: black;
+    -fx-text-fill: red;
+}
+.menu:showing { /* menu when it's being shown (activated) */
+    -fx-text-fill: red;
+    -fx-background-color: black;
+
+}
+.menu .label { /* Styles the text on a menu item */
+    -fx-text-fill: red;
+}
+.menu:showing .label { /* Styles the text on a menu item when activated */
+    -fx-text-fill: red;
+}
+.context-menu{
+    -fx-background-color: black;
+}
+.table-view .column-header-background{
+
+}
+.insertMovies{
+    -fx-alternative-column-fill-visible: false;
+}
+.image-view:hover{
+    /*-fx-effect: DropShadow(20,CRIMSON);*/
+    -fx-effect: dropshadow(three-pass-box, CRIMSON, 20, 0, 0, 0);
+}
+/*.image-view:hover{*/
+    /*!*-fx-border: 2px red inset;*!*/
+    /*-fx-border-style: solid;*/
+    /*-fx-border-color: red;*/
+    /*-fx-border-width: 2px;*/
+/*}*/
+
+
+/*
+    Magnifying Glass
+
+    #magnifying-glass {
+      font-size: 10em;
+      display: inline-block;
+      width: 0.4em;
+      box-sizing: content-box;
+      height: 0.4em;
+      border: 0.1em solid red;
+      position: relative;
+      border-radius: 0.35em;
+    }
+    #magnifying-glass:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -0.25em;
+      bottom: -0.1em;
+      border-width: 0;
+      background: red;
+      width: 0.35em;
+      height: 0.08em;
+      transform: rotate(45deg);
+    }
+*/
+
+
+

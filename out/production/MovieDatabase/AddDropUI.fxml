@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AddDropPane" prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddDropMovieUIController">
+   <children>
+       <MenuBar prefHeight="29.0" prefWidth="664.0" stylesheets="@dashboardCss.css">
+           <menus>
+               <Menu fx:id="HomeLbl" mnemonicParsing="false" onAction="#HomeBtn2_Clicked" onHiding="#fireDummyItem" onShowing="#fireDummyItem" text="Home">
+                   <items>
+                       <MenuItem fx:id="dummyMenuItem" mnemonicParsing="false" onAction="#HomeBtn2_Clicked" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" onAction="#MoviesBtn_clicked" text="Movies">
+                   <!--<items>-->
+                   <!--<MenuItem mnemonicParsing="false" text="Delete" />-->
+                   <!--</items>-->
+               </Menu>
+               <Menu mnemonicParsing="false" onAction="#MyListBtn_Clicked" text="My List">
+                   <!--<items>-->
+                   <!--<MenuItem mnemonicParsing="false" text="About" />-->
+                   <!--</items>-->
+               </Menu>
+               <Menu mnemonicParsing="false" text="Search" />
+               <Menu mnemonicParsing="false" text="Profile">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#MyAccountBtn_Clicked" text="My Account" />
+                       <MenuItem mnemonicParsing="false" onAction="#ProfileBtn_Clicked" text="Change Profile" />
+                       <Menu mnemonicParsing="false" text="Admin" onAction="#AdminBtn_Clicked">
+                           <items>
+                               <MenuItem mnemonicParsing="false" onAction="#AddDropMoviesBtn_Clicked" text="Add/Drop Movies" />
+                               <!--<MenuItem mnemonicParsing="false" onAction="#AddActorsBtn_Clicked" text="Add Actors" />-->
+                           </items>
+                       </Menu>
+                       <!--<MenuItem mnemonicParsing="false" text="Admin" />-->
+                       <MenuItem mnemonicParsing="false" onAction="#LogOutBtn_Clicked" text="Log Out" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="81.0" text="Add Movies" textFill="RED" />
+      <TextField fx:id="inputTitleTF" alignment="CENTER" layoutX="14.0" layoutY="53.0" prefHeight="27.0" prefWidth="301.0" promptText="Title" />
+      <TextField fx:id="inputYearReleasedTF" alignment="CENTER" layoutX="14.0" layoutY="104.0" prefHeight="27.0" prefWidth="301.0" promptText="Year Released" />
+      <CheckBox fx:id="hiddenCB" contentDisplay="CENTER" layoutX="14.0" layoutY="155.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="91.0" text="Hidden" textFill="RED" />
+      <!--<TableView fx:id="movieTVDisplay" editable="true" fixedCellSize="2.0" layoutX="15.0" layoutY="253.0" prefHeight="200.0" prefWidth="600.0" tableMenuButtonVisible="true">-->
+        <!--&lt;!&ndash;<columns>&ndash;&gt;-->
+          <!--&lt;!&ndash;<TableColumn prefWidth="111.0" text="Title" />&ndash;&gt;-->
+          <!--&lt;!&ndash;<TableColumn prefWidth="148.0" text="Year Released" />&ndash;&gt;-->
+          <!--&lt;!&ndash;<TableColumn prefWidth="164.0" text="Hidden" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</columns>&ndash;&gt;-->
+      <!--</TableView>-->
+      <Label layoutX="15.0" layoutY="216.0" prefHeight="17.0" prefWidth="140.0" text="Remove/Hide Movies" textFill="RED" />
+      <TextField fx:id="inputACTF" layoutX="372.0" layoutY="53.0" promptText="Available Countries" />
+      <Button fx:id="submitBtn" layoutX="416.0" layoutY="476.0" mnemonicParsing="false" onAction="#submitBtn_Clicked" prefHeight="27.0" prefWidth="123.0" text="Submit" />
+      <!--<ChoiceBox fx:id="tableDisplayCB" layoutX="165.0" layoutY="211.0" onInputMethodTextChanged="#tableDisplayCB_Changed" prefWidth="150.0" />-->
+   </children>
+</AnchorPane>

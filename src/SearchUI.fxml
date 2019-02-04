@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="700.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchUIController">
+   <children>
+       <MenuBar prefHeight="29.0" prefWidth="664.0" stylesheets="@dashboardCss.css">
+           <menus>
+               <Menu fx:id="HomeLbl" mnemonicParsing="false" onAction="#HomeBtn2_Clicked" onHiding="#fireDummyItem" onShowing="#fireDummyItem" text="Home">
+                   <items>
+                       <MenuItem fx:id="dummyMenuItem" mnemonicParsing="false" onAction="#HomeBtn2_Clicked" />
+                   </items>
+               </Menu>
+               <Menu mnemonicParsing="false" onAction="#MoviesBtn_clicked" text="Movies">
+                <!--<items>-->
+                <!--<MenuItem mnemonicParsing="false" text="Delete" />-->
+                <!--</items>-->
+            </Menu>
+               <Menu mnemonicParsing="false" onAction="#MyListBtn_Clicked" text="My List">
+                <!--<items>-->
+                <!--<MenuItem mnemonicParsing="false" text="About" />-->
+                <!--</items>-->
+            </Menu>
+               <Menu mnemonicParsing="false" text="Search" />
+               <Menu mnemonicParsing="false" text="Profile">
+                   <items>
+                       <MenuItem mnemonicParsing="false" onAction="#MyAccountBtn_Clicked" text="My Account" />
+                       <MenuItem mnemonicParsing="false" onAction="#ProfileBtn_Clicked" text="Change Profile" />
+                       <Menu mnemonicParsing="false" onAction="#AdminBtn_Clicked" text="Admin">
+                           <items>
+                               <MenuItem mnemonicParsing="false" onAction="#AddDropMoviesBtn_Clicked" text="Add/Drop Movies" />
+                               <!--<MenuItem mnemonicParsing="false" onAction="#AddActorsBtn_Clicked" text="Add Actors" />-->
+                           </items>
+                       </Menu>
+                       <!--<MenuItem mnemonicParsing="false" text="Admin" />-->
+                       <MenuItem mnemonicParsing="false" onAction="#LogOutBtn_Clicked" text="Log Out" />
+                   </items>
+               </Menu>
+           </menus>
+       </MenuBar>
+      <ScrollPane layoutY="84.0" prefHeight="818.0" prefWidth="700.0">
+        <content>
+            <!--<TextField fx:id="searchInputTF" onAction="#SearchBar_Activated" />-->
+          <AnchorPane minHeight="890.0" minWidth="690.0" prefHeight="890.0" prefWidth="690.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="22.0" layoutY="24.0" prefHeight="45.0" prefWidth="112.0" text="Movie" textFill="RED" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="204.0" layoutY="24.0" prefHeight="45.0" prefWidth="112.0" text="Actors" textFill="RED" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="408.0" layoutY="24.0" prefHeight="45.0" prefWidth="112.0" text="Genre" textFill="RED" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MovieColumnLbl" layoutX="44.0" layoutY="112.0" text="Label" textFill="RED" />
+                  <Label fx:id="ActorsColumnLbl" layoutX="226.0" layoutY="112.0" text="Label" textFill="RED" />
+                  <Label fx:id="GenreColumnLbl" layoutX="430.0" layoutY="112.0" text="Label" textFill="RED" />
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <TextField fx:id="searchInputTF" alignment="CENTER" layoutX="14.0" layoutY="42.0" prefHeight="27.0" prefWidth="334.0" promptText="Search Movie, Actor, Genre" />
+      <Button alignment="CENTER" layoutX="377.0" layoutY="42.0" mnemonicParsing="false" onAction="#SearchBar_Activated" prefHeight="27.0" prefWidth="125.0" text="Submit" textFill="RED" />
+   </children>
+</AnchorPane>

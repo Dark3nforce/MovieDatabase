@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="655.0" prefWidth="853.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateProfileController">
+   <children>
+      <Label fx:id="CNP" layoutX="47.0" layoutY="41.0" text="Create a New Profile" />
+      <TextField fx:id="EnterName" layoutX="38.0" layoutY="88.0" promptText="Enter Name" />
+      <Label layoutX="46.0" layoutY="157.0" text="Pick a Profile Picture" />
+      <ImageView fx:id="alien" fitHeight="59.0" fitWidth="59.0" layoutX="46.0" layoutY="189.0" onMouseClicked="#image_Pressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/alien.PNG" />
+         </image></ImageView>
+      <ImageView fx:id="happy" fitHeight="59.0" fitWidth="59.0" layoutX="124.0" layoutY="189.0" onMouseClicked="#image_Pressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/happy.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="puzzle" fitHeight="56.0" fitWidth="55.0" layoutX="124.0" layoutY="258.0" onMouseClicked="#image_Presssed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/puzzle.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="swirl" fitHeight="59.0" fitWidth="59.0" layoutX="46.0" layoutY="258.0" onMouseClicked="#image_Presssed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/swirl.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hey" fitHeight="59.0" fitWidth="59.0" layoutX="202.0" layoutY="258.0" onMouseClicked="#image_Presssed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/hey.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fingerPrint" fitHeight="52.0" fitWidth="59.0" layoutX="279.0" layoutY="188.0" onMouseClicked="#image_Presssed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/fingerPrint.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="boy" fitHeight="59.0" fitWidth="59.0" layoutX="279.0" layoutY="258.0" onMouseClicked="#image_Presssed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/boy.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="46.0" layoutY="343.0" text="Choose a few movies you're interested in" />
+      <ImageView fx:id="dead" fitHeight="59.0" fitWidth="66.0" layoutX="197.0" layoutY="189.0" onMouseClicked="#image_Pressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pictures/dead.PNG" />
+         </image>
+      </ImageView>
+      <Button fx:id="createProfile" layoutX="38.0" layoutY="475.0" mnemonicParsing="false" onAction="#createBtn_Pressed" text="Create Profile" />
+   </children>
+</AnchorPane>

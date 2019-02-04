@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MovieDB">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.11">
+    <root id="1">
+      <ServerVersion>3.20.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <collation id="3" parent="1" name="BINARY"/>
+    <collation id="4" parent="1" name="NOCASE"/>
+    <collation id="5" parent="1" name="RTRIM"/>
+    <table id="6" parent="2" name="Account"/>
+    <table id="7" parent="2" name="ActiveDevices"/>
+    <table id="8" parent="2" name="Actor"/>
+    <table id="9" parent="2" name="Actors_Movie"/>
+    <table id="10" parent="2" name="FavoritesList"/>
+    <table id="11" parent="2" name="Genre"/>
+    <table id="12" parent="2" name="Movie"/>
+    <table id="13" parent="2" name="Profile"/>
+    <table id="14" parent="2" name="SubscriptionLevel"/>
+    <table id="15" parent="2" name="SubscriptionPlan"/>
+    <table id="16" parent="2" name="WatchHistory"/>
+    <table id="17" parent="2" name="sqlite_master">
+      <System>1</System>
+    </table>
+    <column id="18" parent="6" name="AccountID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="6" name="AccountUsername">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="6" name="AccountPassword">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="6" name="Admin">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="22" parent="6" name="sqlite_autoindex_Account_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>AccountID</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="6">
+      <ColNames>AccountID</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Account_1</UnderlyingIndexName>
+    </key>
+    <column id="24" parent="7" name="ProfileID">
+      <Position>1</Position>
+    </column>
+    <column id="25" parent="7" name="Device1">
+      <Position>2</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="7" name="Device2">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="27" parent="7">
+      <ColNames>ProfileID</ColNames>
+      <RefTableName>Profile</RefTableName>
+      <RefColNames>ProfileID</RefColNames>
+    </foreign-key>
+    <column id="28" parent="8" name="ActorID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="8" name="FirstName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="8" name="LastName">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="8" name="ActorAge">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="32" parent="8" name="sqlite_autoindex_Actor_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ActorID</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="8">
+      <ColNames>ActorID</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Actor_1</UnderlyingIndexName>
+    </key>
+    <column id="34" parent="9" name="ActorID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="9" name="MovieID">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="36" parent="9">
+      <ColNames>ActorID</ColNames>
+      <RefTableName>Actor</RefTableName>
+      <RefColNames>ActorID</RefColNames>
+    </foreign-key>
+    <foreign-key id="37" parent="9">
+      <ColNames>MovieID</ColNames>
+      <RefTableName>Movie</RefTableName>
+      <RefColNames>MovieID</RefColNames>
+    </foreign-key>
+    <column id="38" parent="10" name="ProfileID">
+      <Position>1</Position>
+    </column>
+    <column id="39" parent="10" name="MovieID">
+      <Position>2</Position>
+    </column>
+    <column id="40" parent="10" name="AddedToFavorites">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="41" parent="10">
+      <ColNames>ProfileID</ColNames>
+      <RefTableName>Profile</RefTableName>
+      <RefColNames>ProfileID</RefColNames>
+    </foreign-key>
+    <foreign-key id="42" parent="10">
+      <ColNames>MovieID</ColNames>
+      <RefTableName>Movie</RefTableName>
+      <RefColNames>MovieID</RefColNames>
+    </foreign-key>
+    <column id="43" parent="11" name="GenreID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="11" name="GenreName">
+      <Position>2</Position>
+      <DataType>char(255)|0s</DataType>
+    </column>
+    <column id="45" parent="11" name="MovieID">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="46" parent="11">
+      <ColNames>MovieID</ColNames>
+      <RefTableName>Movie</RefTableName>
+      <RefColNames>MovieID</RefColNames>
+    </foreign-key>
+    <column id="47" parent="12" name="MovieID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="12" name="MovieTitle">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="12" name="AvailableCountries">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="12" name="YearReleased">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="12" name="Hidden">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="12" name="MovieFile">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="53" parent="12" name="VideoFile">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>mp4</DefaultExpression>
+    </column>
+    <index id="54" parent="12" name="sqlite_autoindex_Movie_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>MovieID</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="12">
+      <ColNames>MovieID</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Movie_1</UnderlyingIndexName>
+    </key>
+    <column id="56" parent="13" name="ProfileID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="13" name="ProfileName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="13" name="LinkedEmail">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="13" name="LinkedPhoneNum">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="60" parent="13" name="sqlite_autoindex_Profile_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ProfileID</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="61" parent="13">
+      <ColNames>ProfileID</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Profile_1</UnderlyingIndexName>
+    </key>
+    <column id="62" parent="14" name="SubscriptionPL">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="14" name="MonthlyPrice">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="64" parent="14" name="sqlite_autoindex_SubscriptionLevel_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SubscriptionPL</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="14">
+      <ColNames>SubscriptionPL</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_SubscriptionLevel_1</UnderlyingIndexName>
+    </key>
+    <column id="66" parent="15" name="AccountID">
+      <Position>1</Position>
+    </column>
+    <column id="67" parent="15" name="SubcriptionPL">
+      <Position>2</Position>
+    </column>
+    <column id="68" parent="15" name="BillingInfo">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="15" name="BillingRenewalDate">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="70" parent="15">
+      <ColNames>AccountID</ColNames>
+      <RefTableName>Account</RefTableName>
+      <RefColNames>AccountID</RefColNames>
+    </foreign-key>
+    <foreign-key id="71" parent="15">
+      <ColNames>SubcriptionPL</ColNames>
+      <RefTableName>SubscriptionLevel</RefTableName>
+      <RefColNames>SubscriptionPL</RefColNames>
+    </foreign-key>
+    <column id="72" parent="16" name="ProfileID">
+      <Position>1</Position>
+    </column>
+    <column id="73" parent="16" name="MovieID">
+      <Position>2</Position>
+    </column>
+    <column id="74" parent="16" name="WatchedOrNot">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="75" parent="16">
+      <ColNames>ProfileID</ColNames>
+      <RefTableName>Profile</RefTableName>
+      <RefColNames>ProfileID</RefColNames>
+    </foreign-key>
+    <foreign-key id="76" parent="16">
+      <ColNames>MovieID</ColNames>
+      <RefTableName>Movie</RefTableName>
+      <RefColNames>MovieID</RefColNames>
+    </foreign-key>
+    <column id="77" parent="17" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="78" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="79" parent="17" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="80" parent="17" name="rootpage">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+    </column>
+    <column id="81" parent="17" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+  </database-model>
+</dataSource>

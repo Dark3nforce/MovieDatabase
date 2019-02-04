@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="dashboardPane" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardUIController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="664.0" stylesheets="@dashboardCss.css">
+        <menus>
+          <Menu fx:id="HomeLbl" mnemonicParsing="false" onAction="#HomeBtn_Clicked" onShowing="#fireDummyItem" text="Home">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#HomeBtn_Clicked" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#MoviesBtn_clicked" text="Movies">
+            <!--<items>-->
+              <!--<MenuItem mnemonicParsing="false" text="Delete" />-->
+            <!--</items>-->
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#MyListBtn_Clicked" text="My List">
+            <!--<items>-->
+              <!--<MenuItem mnemonicParsing="false" text="About" />-->
+            <!--</items>-->
+          </Menu>
+            <Menu fx:id="SearchLbl" mnemonicParsing="false" onShowing="#fireSearchDummyItem" onShown="#fireSearchDummyItem" text="Search">
+                <items>
+                    <MenuItem fx:id="SearchDummyMenuItem" mnemonicParsing="false" onAction="#SearchBtn_Clicked" />
+                </items></Menu>
+          <Menu mnemonicParsing="false" text="Profile">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#MyAccountBtn_Clicked" text="My Account" />
+                  <MenuItem mnemonicParsing="false" onAction="#ProfileBtn_Clicked" text="Change Profile" />
+                  <Menu fx:id="AdminBtn" mnemonicParsing="false" onAction="#AdminBtn_Clicked" text="Admin">
+                    <items>
+                      <MenuItem fx:id="AddDropMovieBtn" mnemonicParsing="false" onAction="#AddDropMoviesBtn_Clicked" text="Add/Drop Movies" />
+                      <!--<MenuItem mnemonicParsing="false" onAction="#AddActorsBtn_Clicked" text="Add Actors" />-->
+                    </items>
+                  </Menu>
+                  <!--<MenuItem mnemonicParsing="false" text="Admin" />-->
+                  <MenuItem mnemonicParsing="false" onAction="#LogOutBtn_Clicked" text="Log Out" />
+              </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ScrollPane hbarPolicy="NEVER" layoutY="39.0" prefHeight="543.0" prefWidth="654.0" style="-fx-background-color: black;" vmax="700.0">
+        <content>
+          <AnchorPane minHeight="0.0" prefWidth="649.0">
+               <children>
+                    <GridPane fx:id="gp" alignment="CENTER" gridLinesVisible="true" prefHeight="692.0" prefWidth="700.0" style="-fx-background-color: black;">
+                     <rowConstraints>
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                        <RowConstraints minHeight="100.0" prefHeight="100.0" />
+                     </rowConstraints>
+                     <columnConstraints>
+                        <ColumnConstraints minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints minWidth="100.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <children>
+                        <ImageView fx:id="IV1" fitHeight="100.0" fitWidth="100.0" nodeOrientation="INHERIT" onMousePressed="#IV1setOnMousePressed"  pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="IV2" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV2setOnMousePressed"  pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                        <ImageView fx:id="IV3" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV3setOnMousePressed"  pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                        <ImageView fx:id="IV4" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV4setOnMousePressed"  pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+                        <ImageView fx:id="IV5" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV5setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+                        <ImageView fx:id="IV6" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV6setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                        <ImageView fx:id="IV7" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV7setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ImageView fx:id="IV8" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV8setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ImageView fx:id="IV9" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV9setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <ImageView fx:id="IV10" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV10setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <ImageView fx:id="IV11" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV11setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+                        <ImageView fx:id="IV12" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV12setOnMousePressed"
+                                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ImageView fx:id="IV13" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV13setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                         <ImageView fx:id="IV14" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV14setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <ImageView fx:id="IV15" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV15setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <ImageView fx:id="IV16" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV16setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+                        <ImageView fx:id="IV17" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV17setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ImageView fx:id="IV18" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV18setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <ImageView fx:id="IV19" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV19setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <ImageView fx:id="IV20" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV20setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <ImageView fx:id="IV21" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV21setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+                        <ImageView fx:id="IV22" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV22setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ImageView fx:id="IV23" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV23setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <ImageView fx:id="IV24" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV24setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <ImageView fx:id="IV25" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV25setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <ImageView fx:id="IV26" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV26setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />
+                        <ImageView fx:id="IV27" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV27setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ImageView fx:id="IV28" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV28setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <ImageView fx:id="IV29" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV29setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <ImageView fx:id="IV30" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV30setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <ImageView fx:id="IV31" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV31setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" />
+                        <ImageView fx:id="IV32" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV32setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <ImageView fx:id="IV33" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV33setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <ImageView fx:id="IV34" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV34setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <ImageView fx:id="IV35" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV35setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                        <ImageView fx:id="IV36" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV36setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" />
+                        <ImageView fx:id="IV37" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV37setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <ImageView fx:id="IV38" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV38setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                        <ImageView fx:id="IV39" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV39setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                        <ImageView fx:id="IV40" fitHeight="100.0" fitWidth="100.0" onMousePressed="#IV40setOnMousePressed" onMouseReleased="#setOnMouseReleased" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
