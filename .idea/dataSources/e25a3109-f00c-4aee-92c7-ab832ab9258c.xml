@@ -48,7 +48,6 @@
     <index id="22" parent="6" name="sqlite_autoindex_Account_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>AccountID</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="23" parent="6">
@@ -96,7 +95,6 @@
     <index id="32" parent="8" name="sqlite_autoindex_Actor_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ActorID</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="33" parent="8">
@@ -202,7 +200,6 @@
     <index id="54" parent="12" name="sqlite_autoindex_Movie_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>MovieID</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="55" parent="12">
@@ -233,7 +230,6 @@
     <index id="60" parent="13" name="sqlite_autoindex_Profile_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ProfileID</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="61" parent="13">
@@ -254,7 +250,6 @@
     <index id="64" parent="14" name="sqlite_autoindex_SubscriptionLevel_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>SubscriptionPL</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="65" parent="14">
