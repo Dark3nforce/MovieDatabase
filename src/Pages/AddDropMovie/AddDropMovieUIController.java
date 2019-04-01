@@ -1,11 +1,12 @@
+package Pages.AddDropMovie;
+
+import Res.DBConnecter;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -140,7 +141,7 @@ public class AddDropMovieUIController implements Initializable {
         System.out.println(event);
         System.out.println("Home btn Clicked");
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("DashboardUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/Dashboard/DashboardUI.fxml"));
             AddDropPane.getChildren().setAll(pane2);
         } catch (IOException e) {
             e.printStackTrace();
@@ -188,9 +189,9 @@ public class AddDropMovieUIController implements Initializable {
 
     @FXML
     private void AdminBtn_Clicked(ActionEvent actionEvent) {
-        System.out.println("Admin btn Clicked");
+        System.out.println("Pages.Admin btn Clicked");
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("AdminUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/Admin/AdminUI.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -200,7 +201,7 @@ public class AddDropMovieUIController implements Initializable {
     @FXML
     private void AddDropMoviesBtn_Clicked(ActionEvent actionEvent) {
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("AddDropUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/AddDropMovie/AddDropUI.fxml"));
             AddDropPane.getChildren().setAll(pane2);
         } catch (IOException e) {
             e.printStackTrace();
@@ -210,7 +211,7 @@ public class AddDropMovieUIController implements Initializable {
     @FXML
     private void LogOutBtn_Clicked(ActionEvent actionEvent) {
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("LoginUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/Login/LoginUI.fxml"));
             AddDropPane.getChildren().setAll(pane2);
         } catch (IOException e) {
             e.printStackTrace();

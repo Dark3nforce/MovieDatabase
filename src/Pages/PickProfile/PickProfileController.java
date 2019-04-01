@@ -1,17 +1,13 @@
+package Pages.PickProfile;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 
 
 import java.io.IOException;
-import java.sql.*;
-import java.util.ArrayList;
 
 public class PickProfileController {
 
@@ -33,7 +29,7 @@ public class PickProfileController {
         System.out.println("Going to Create Profile Page");
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("CreateProfileUI.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Pages/CreateProfile/CreateProfileUI.fxml"));
             rootPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();

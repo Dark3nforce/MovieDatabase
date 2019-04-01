@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PickProfileController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pages.PickProfile.PickProfileController">
    <children>
       <Label fx:id="profileName1" layoutX="71.0" layoutY="140.0" prefHeight="17.0" prefWidth="73.0" text="profileName1" />
       <Label fx:id="profileName2" layoutX="257.0" layoutY="140.0" text="profileName2" />

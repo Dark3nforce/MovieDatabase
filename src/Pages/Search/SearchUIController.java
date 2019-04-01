@@ -1,3 +1,6 @@
+package Pages.Search;
+
+import Res.DBConnecter;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -6,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -83,7 +85,7 @@ public class SearchUIController {
         System.out.println(event);
         System.out.println("Home btn Clicked");
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("DashboardUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/Dashboard/DashboardUI.fxml"));
             searchPane.getChildren().setAll(pane2);
         } catch (IOException e) {
             e.printStackTrace();
@@ -131,9 +133,9 @@ public class SearchUIController {
 
     @FXML
     private void AdminBtn_Clicked(ActionEvent actionEvent) {
-        System.out.println("Admin btn Clicked");
+        System.out.println("Pages.Admin btn Clicked");
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("AdminUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/Admin/AdminUI.fxml"));
             searchPane.getChildren().setAll(pane2);
         } catch (IOException e) {
             e.printStackTrace();
@@ -143,7 +145,7 @@ public class SearchUIController {
     @FXML
     private void AddDropMoviesBtn_Clicked(ActionEvent actionEvent) {
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("AddDropUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/AddDropMovie/AddDropUI.fxml"));
             searchPane.getChildren().setAll(pane2);
         } catch (IOException e) {
             e.printStackTrace();
@@ -153,7 +155,7 @@ public class SearchUIController {
     @FXML
     private void LogOutBtn_Clicked(ActionEvent actionEvent) {
         try {
-            pane2 = FXMLLoader.load(getClass().getResource("LoginUI.fxml"));
+            pane2 = FXMLLoader.load(getClass().getResource("Pages/Login/LoginUI.fxml"));
             searchPane.getChildren().setAll(pane2);
         } catch (IOException e) {
             e.printStackTrace();

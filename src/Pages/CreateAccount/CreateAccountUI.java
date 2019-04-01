@@ -1,3 +1,5 @@
+package Pages.CreateAccount;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -84,7 +86,7 @@ public class CreateAccountUI
         // test for the agree box to be checked
         try
         {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("CreateProfileUI.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("Pages/CreateProfile/CreateProfileUI.fxml"));
             pane.getStylesheets().add(getClass().getResource("CreateProfileUICss.css").toExternalForm());
             rootPane.getChildren().setAll(pane);
 

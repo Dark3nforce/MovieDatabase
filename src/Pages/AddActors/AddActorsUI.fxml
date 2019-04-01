@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddActorsUIController">
+<AnchorPane prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pages.AddActors.AddActorsUIController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="39.0" prefWidth="81.0" text="Add Movies" textFill="RED" />
       <TextField layoutX="14.0" layoutY="53.0" prefHeight="27.0" prefWidth="244.0" />

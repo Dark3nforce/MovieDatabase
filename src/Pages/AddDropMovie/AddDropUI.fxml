@@ -6,9 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="AddDropPane" prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddDropMovieUIController">
+<AnchorPane fx:id="AddDropPane" prefHeight="540.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pages.AddDropMovie.AddDropMovieUIController">
    <children>
-       <MenuBar prefHeight="29.0" prefWidth="664.0" stylesheets="@dashboardCss.css">
+       <MenuBar prefHeight="29.0" prefWidth="664.0" stylesheets="@../Dashboard/dashboardCss.css">
            <menus>
                <Menu fx:id="HomeLbl" mnemonicParsing="false" onAction="#HomeBtn2_Clicked" onHiding="#fireDummyItem" onShowing="#fireDummyItem" text="Home">
                    <items>
@@ -25,18 +25,18 @@
                    <!--<MenuItem mnemonicParsing="false" text="About" />-->
                    <!--</items>-->
                </Menu>
-               <Menu mnemonicParsing="false" text="Search" />
+               <Menu mnemonicParsing="false" text="Pages.Search" />
                <Menu mnemonicParsing="false" text="Profile">
                    <items>
                        <MenuItem mnemonicParsing="false" onAction="#MyAccountBtn_Clicked" text="My Account" />
                        <MenuItem mnemonicParsing="false" onAction="#ProfileBtn_Clicked" text="Change Profile" />
-                       <Menu mnemonicParsing="false" text="Admin" onAction="#AdminBtn_Clicked">
+                       <Menu mnemonicParsing="false" text="Pages.Admin" onAction="#AdminBtn_Clicked">
                            <items>
                                <MenuItem mnemonicParsing="false" onAction="#AddDropMoviesBtn_Clicked" text="Add/Drop Movies" />
                                <!--<MenuItem mnemonicParsing="false" onAction="#AddActorsBtn_Clicked" text="Add Actors" />-->
                            </items>
                        </Menu>
-                       <!--<MenuItem mnemonicParsing="false" text="Admin" />-->
+                       <!--<MenuItem mnemonicParsing="false" text="Pages.Admin" />-->
                        <MenuItem mnemonicParsing="false" onAction="#LogOutBtn_Clicked" text="Log Out" />
                    </items>
                </Menu>

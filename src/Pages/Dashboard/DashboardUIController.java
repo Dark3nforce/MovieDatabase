@@ -1,4 +1,8 @@
+package Pages.Dashboard;
 
+import Pages.Admin.AdminUIController;
+import Pages.Login.LoginController;
+import Res.DBConnecter;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 
@@ -15,8 +19,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-
-import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -104,8 +106,8 @@ public class DashboardUIController implements Initializable {
     @FXML
     private void SearchBtn_Clicked(ActionEvent actionEvent) {
         try {
-            pane = FXMLLoader.load(getClass().getResource("SearchUI.fxml"));
-            pane.getStylesheets().add(getClass().getResource("dashboardCss.css").toExternalForm());
+            pane = FXMLLoader.load(getClass().getResource("Pages/Search/SearchUI.fxml"));
+            pane.getStylesheets().add(getClass().getResource("Pages/Dashboard/dashboardCss.css").toExternalForm());
             dashboardPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();
@@ -127,7 +129,7 @@ public class DashboardUIController implements Initializable {
 
         System.out.println("Home btn Clicked");
         try {
-            pane = FXMLLoader.load(getClass().getResource("DashboardUI.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("Pages/Dashboard/DashboardUI.fxml"));
 //            pane = FXMLLoader.load(getClass().getResource("AddDropUI.fxml"));
             dashboardPane.getChildren().setAll(pane);
         } catch (IOException e) {
@@ -160,9 +162,9 @@ public class DashboardUIController implements Initializable {
     @FXML
     private void AdminBtn_Clicked() {
 //        isAdmin();
-        System.out.println("Admin btn Clicked");
+        System.out.println("Pages.Admin btn Clicked");
         try {
-            pane = FXMLLoader.load(getClass().getResource("AdminUI.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("Pages/Admin/AdminUI.fxml"));
             dashboardPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();
@@ -170,7 +172,7 @@ public class DashboardUIController implements Initializable {
     }
 
     /**
-     * Create Admin Page and link the Add/Drop Page to it.
+     * Create Pages.Admin Page and link the Add/Drop Page to it.
      *
      * @param mouseEvent*/
     @FXML
@@ -191,7 +193,7 @@ public class DashboardUIController implements Initializable {
     @FXML
     private void LogOutBtn_Clicked(ActionEvent actionEvent) {
         try {
-            pane = FXMLLoader.load(getClass().getResource("LoginUI.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("Pages/Login/LoginUI.fxml"));
             dashboardPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();
@@ -201,7 +203,7 @@ public class DashboardUIController implements Initializable {
     @FXML
     private void AddDropMoviesBtn_Clicked(ActionEvent actionEvent) {
         try {
-            pane = FXMLLoader.load(getClass().getResource("AddDropUI.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("Pages/AddDropMovie/AddDropUI.fxml"));
             dashboardPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();
@@ -376,8 +378,8 @@ public class DashboardUIController implements Initializable {
             pstmt.setString(2, login.getPasswordTF().getText());
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                hidden = rs.getBoolean("Admin");
-//                if (!rs.getBoolean("Admin")) {
+                hidden = rs.getBoolean("Pages/Admin");
+//                if (!rs.getBoolean("Pages.Admin")) {
 //                    AdminBtn.hide();
 //
 //                }

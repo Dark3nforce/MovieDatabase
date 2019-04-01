@@ -1,3 +1,6 @@
+package Pages.Login;
+
+import Res.DBConnecter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,16 +39,16 @@ public class LoginController {
                  int total = rs.getInt("count");
                 System.out.println(total);
                  if (total == 1) {
-                     System.out.println("Login Pass");
+                     System.out.println("Pages.Login Pass");
                      //Loads next scene into the window
                      lblLoginFail.setVisible(false);
 //                     AnchorPane pane = FXMLLoader.load(getClass().getResource("SelectProfileUI.fxml"));
-                     AnchorPane pane = FXMLLoader.load(getClass().getResource("DashboardUI.fxml"));
-                     pane.getStylesheets().add(getClass().getResource("dashboardCss.css").toExternalForm());
+                     AnchorPane pane = FXMLLoader.load(getClass().getResource("Pages/Dashboard/DashboardUI.fxml"));
+                     pane.getStylesheets().add(getClass().getResource("Pages/Dashboard/dashboardCss.css").toExternalForm());
                      rootPane.getChildren().setAll(pane);
                  }
                  else {
-                     System.out.println("Login Fail");
+                     System.out.println("Pages.Login Fail");
                      lblLoginFail.setVisible(true);
                  }
             }
@@ -76,7 +79,7 @@ public class LoginController {
     private void createAccountBtn_Pressed(ActionEvent actionEvent) {
         System.out.println("createAccountBtn_Pressed");
         try {
-             AnchorPane pane = FXMLLoader.load(getClass().getResource("CreateProfileUI.fxml"));
+             AnchorPane pane = FXMLLoader.load(getClass().getResource("Pages/CreateProfile/CreateProfileUI.fxml"));
              rootPane.getChildren().setAll(pane);
         } catch (IOException e) {
             e.printStackTrace();

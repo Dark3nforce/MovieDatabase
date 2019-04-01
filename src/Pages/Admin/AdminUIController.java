@@ -1,4 +1,5 @@
-import javafx.beans.InvalidationListener;
+package Pages.Admin;
+
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.DoubleProperty;
 import javafx.event.ActionEvent;
@@ -15,7 +16,6 @@ import javafx.scene.media.MediaView;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class AdminUIController implements Initializable {
@@ -74,7 +74,7 @@ public class AdminUIController implements Initializable {
     @FXML
     private void addDropLbl_Clicked(MouseEvent mouseEvent) {
         try {
-            pane = FXMLLoader.load(getClass().getResource("AddDropUI.fxml"));
+            pane = FXMLLoader.load(getClass().getResource("Pages/AddDropMovie/AddDropUI.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
